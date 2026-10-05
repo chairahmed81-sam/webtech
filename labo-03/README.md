@@ -52,7 +52,16 @@ Computed-tabblad → hier zijn breedte en hoogte van main gelijk, dus de marge i
 ## 5. Landingspagina
 
 - Gaf je `main` een `height` of een `min-height`, en waarom?
+
+min-height: 80vh → de hero is minstens 80% van de vensterhoogte, maar groeit mee als de inhoud meer plaats nodig heeft.
+
+height: 80vh → vaste hoogte: als de inhoud groter is, loopt ze onder het blauwe vlak uit.
+
 - Wat gebeurt er met de twee helften als je een regeleinde zet tussen `</article>` en `<div class="afbeelding">`?
+
+Regeleinde tussen inline-block boxen → telt als een spatie.
+
+50% + spatie + 50% → is meer dan 100%, dus de afbeelding springt naar de volgende regel, onder de tekst.
 
 ## Thuis: B3.1 (met AI of zonder AI)
 
