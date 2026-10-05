@@ -1,16 +1,31 @@
 # Labo 3 - reflecties
 
-Naam: (jouw naam)
+Naam: Ahmed Chair
 
 ## 1. Kleurenstalen
 
 - Welke twee waarden uit de user agent stylesheet moest je op de lijst wegwerken, en waar las je ze af?
+ 
+  De browser past standaard padding en opsommingstekens toe op de ul (padding-left: 40px en list-style-type: disc).
+  Ik heb dit ontdekt met behulp van DevTools: in de Styles-sectie zag ik de "user agent stylesheet", en in het boxmodel-diagram zag ik de waarde 40 links in het groene paddingvak. Ik heb ze weggewerkt met padding: 0 en list-style: none.
+
 - Wat verandert er aan de banden als je het venster hoger maakt, en wat verandert er niet?
+
+  Als het venster hoger wordt, worden de banden ook hoger, omdat de hoogte van de banden altijd 50% van de vensterhoogte is (50vh). Ook de ruimte boven de tekst neemt toe, omdat padding-top 20vh is. Maar de tekstgrootte, de letterafstand en de afstand tussen de codes blijven constant, omdat ze in rem staan, en rem hangt af van de lettergrootte en niet van het venster.
 
 ## 2. Slogan
 
 - Welke property centreerde de tekst, en welke de kolom?
+  
+text-align: center → centreert de tekst in de kolom.
+
+margin: 12rem auto 0 → centreert de kolom zelf; auto verdeelt de vrije ruimte links en rechts gelijk.
+
 - Waarom werkte de padding op de knop pas na `display: inline-block`?
+
+display: inline → een a negeert verticale padding.
+
+display: inline-block → de a krijgt een volledig boxmodel, dus padding werkt wel.
 
 ## 3. Tabblad
 

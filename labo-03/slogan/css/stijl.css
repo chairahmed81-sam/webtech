@@ -2,7 +2,43 @@
 
 /* === tokens === */
 :root {
-
+--kleur-tekst: #282827;
+--kleur-accent: #fccc00;
+--kleur-knop: black;
+--kleur-knop-hover: #333333;
+--kleur-knop-tekst: white;
 }
 
 /* === your rules === */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--kleur-tekst);
+
+    max-width: 40rem;
+    margin: 12rem auto 0;
+    text-align: center;
+
+h2 { font-size: 4.5rem; 
+    line-height: 1.1; 
+    margin-bottom: 2rem;}
+
+h2 span {
+    border-bottom: 1rem solid var(--kleur-accent);
+    border-radius: 0 0 50% 50%;}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;}
+
+a {
+    display: inline-block;
+    background-color: var(--kleur-knop);
+    color: var(--kleur-knop-tekst);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;}
+
+a:hover, a:focus {
+  background-color: var(--kleur-knop-hover);}
+}
