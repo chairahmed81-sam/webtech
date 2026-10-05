@@ -31,10 +31,23 @@ display: inline-block → de a krijgt een volledig boxmodel, dus padding werkt w
 
 - Wat is de visuele breedte van het tabblad, en waarom is dat exact 15rem en geen 15rem plus padding plus border?
 
+- width: 15rem → het tabblad is visueel precies 15rem breed.
+- box-sizing: border-box (in reset.css) → padding en border zitten binnen de width, en worden er niet bovenop geteld.
+- zonder border-box → 15rem + 2 × 2rem padding + 2 × 0.25rem border = 19,5rem breed.
+
 ## 4. Donut
 
 - Waarom werkt `height: 70%` op de cirkel, terwijl F3.2 zegt dat een procentuele hoogte meestal niets doet?
+
+height: 70% → werkt alleen als de ouder zelf een vaste hoogte heeft.
+
+height: 90vh op main → de ouder heeft hier een vaste hoogte, dus de browser kan 70% daarvan uitrekenen.
+
 - Tegen welke maat van de ouder rekende de browser `margin: 15%`: de breedte of de hoogte?
+
+margin: 15% → rekent altijd tegen de breedte van de ouder, ook boven en onder.
+
+Computed-tabblad → hier zijn breedte en hoogte van main gelijk, dus de marge is aan alle kanten even groot.
 
 ## 5. Landingspagina
 
