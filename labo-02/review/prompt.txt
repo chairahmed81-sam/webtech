@@ -1,0 +1,16 @@
+Maak een CSS-stylesheet voor de bestaande HTML-pagina van koffiebar Stroom uit Labo 2.
+
+Gebruik deze vijf kleuren:
+- Papier: #fbf7f0
+- Inkt: #2b2b2b
+- Gedempt: #6b6b6b
+- Accent: #b5451b
+- Zebra: #f1e9dc
+
+Gebruik Georgia voor de titels en Verdana voor de gewone tekst.
+
+Gebruik CSS-variabelen in :root, een basisgrootte van 16px, rem voor tekstgroottes en een regelafstand van 1.6.
+
+Wijzig de HTML niet.
+
+Geef alleen de CSS-code.

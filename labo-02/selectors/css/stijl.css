@@ -18,7 +18,7 @@ nav a {
 
 /* 2. alleen de paragrafen in de footer -> font-size: 0.875rem; */
 
-p footer {
+footer p {
   font-size: 0.875rem;
 }     
 
@@ -33,19 +33,19 @@ p footer {
 
 /* 4. de paragraaf die onmiddellijk na elke h2 komt -> font-style: italic; */
 
-p + h2 {
+h2 + p {
   font-style: italic;
 }
 
 /* 5. elk oneven item in de lijst met openingsuren -> background-color: #f1e9dc; */
 
-li:nth-child(odd) {
+.uren li:nth-child(odd) {
   background-color: #f1e9dc;
 }
 
 /* 6. het laatste item in de lijst met openingsuren -> color: crimson; */
 
-li:last-child {
+.uren li:last-child {
   color: crimson;
 }   
 
@@ -57,7 +57,7 @@ li:last-child {
 
 /* 8. elke link in main wanneer de muis erover gaat OF wanneer ze focus heeft
       -> background-color: yellow; */
-a:hover, a:focus {
+main a:hover, main a:focus {
   background-color: yellow;
 }               
 
