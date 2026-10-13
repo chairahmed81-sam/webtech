@@ -1,0 +1,134 @@
+/* stijl.css - labo 4, dierenasiel (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+
+    --papier: #f7f4ec;
+    --kaart: white;
+    --inkt: #2b2b2b;
+    --gedempt: #6b6b6b;
+    --balk: #1f3a2e;
+    --balktekst: #f3efe6;
+    --accent: #e6b53c;
+}
+
+/* === your rules === */
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--papier);
+    color: var(--inkt);
+    font-family: Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--balk);
+    color: var(--balktekst);
+    padding: 1rem 2rem;    
+}
+
+nav a {
+    color: var(--balktekst);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    color: var(--accent);
+    text-decoration: none;
+    font-family: Georgia, Times, serif;
+    font-size: 1.5rem;
+}
+.actief {
+    color: var(--accent);
+}
+
+main {
+    align-content: start;
+    max-width: 60rem;
+    padding: 2rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.kaarten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uitgelicht {
+    grid-column: 1 / 3;    
+}
+
+.kaart {
+    background-color: var(--kaart);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.beschrijving {
+    flex: 1;
+}   
+.knop {
+    background-color: var(--balk);
+    color: var(--balktekst);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: Georgia, Times, serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+
+.intro, .soort {
+    color: var(--gedempt);
+}
+
+.soort {
+    font-size: 0.875rem;
+}
+
+footer {
+    background-color: var(--balk);
+    color: var(--balktekst);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+.knop:hover, .knop:focus {
+    background-color: var(--inkt);
+}
