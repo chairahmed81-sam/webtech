@@ -35,12 +35,22 @@ Roze onder groen zonder z-index → Zonder z-index beslist de volgorde in de HTM
 ## 4. Toonzaal
 
 - Wat gebeurt er als je `top: 0` weghaalt, en waarom?
+
+Zonder top: 0 plakt de balk niet meer en scrolt hij gewoon mee naar boven. Sticky heeft een drempel nodig om te weten waar hij moet blijven staan. Zonder top weet hij dat niet, en doet hij gewoon als een normale balk (F5.2).
+
 - Wat is het verschil met `position: fixed` voor de rest van de pagina, en welke extra declaratie zou fixed nodig hebben?
+
+position: fixed → Met fixed gaat de balk uit de pagina en hangt hij vast aan het venster. De rest van de pagina schuift dan naar boven, dus de titel zit achter de balk. Met sticky blijft de balk zijn plaats houden, dus er verdwijnt niets. Fixed heeft een extra padding-top: 3.5rem op de body nodig om dat gat op te vullen.
 
 ## 5. Koffiebar Kaai 12
 
 - Welke drie vragen van deze week (container, item, plaatsing) beantwoordde je waar in deze pagina?
+
+Container → body is een grid voor het grondplan, de header is flex voor de balk, .kaarten is een grid van 3 kolommen, en .kaart en .tekst zijn een flex-kolom. Item → de naam in de balk krijgt margin-right: auto en duwt de links naar rechts, en de prijs krijgt margin-top: auto en zakt naar onder. Plaatsing → de badge ligt op de kaart met position: absolute, en de kaart is het anker met position: relative. De balk blijft plakken met sticky.
+
 - Haal `aspect-ratio` weg bij de foto's: wat gebeurt er met het rooster, en waarom?
+
+aspect-ratio weg → Elke foto krijgt dan weer zijn eigen vorm, want ze hebben allemaal een andere verhouding. Sommige foto’s worden hoger dan andere, en de kaarten worden ongelijk. De tekst en de titels staan niet meer op dezelfde hoogte, en het rooster ziet er rommelig uit (F5.9, F4.5).
 
 ## Thuis: B5.1 (met AI of zonder AI)
 
