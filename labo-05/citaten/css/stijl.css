@@ -3,6 +3,49 @@
 /* === tokens === */
 :root {
 
+    --color-blauw: #1e5bd8;
+    --color-roze: #e88bb4;
+    --color-rood: #c51f2a;
+    --color-oranje: #d98c1a;
+    --color-groen: #3b7a2a;
+    --color-salie: #8fb89a;
+    --color-paars: #7b4fa3;
+    --color-grijs: #6b6b6b;
 }
 
 /* === your rules === */
+
+.citaten {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.citaat {
+    flex: 1 1 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-left: 0.5rem solid currentColor;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.citaat cite {
+    font-size: 0.875rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blauw  { color: var(--color-blauw); }
+.roze   { color: var(--color-roze); }
+.rood   { color: var(--color-rood); }
+.oranje { color: var(--color-oranje); }
+.groen  { color: var(--color-groen); }
+.salie  { color: var(--color-salie); }
+.paars  { color: var(--color-paars); }
+.grijs  { color: var(--color-grijs); }
+

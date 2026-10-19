@@ -2,7 +2,68 @@
 
 /* === tokens === */
 :root {
-
+    --color-pagina: #111111;
+    --color-groen: #4e9a52;
+    --color-roze:#f2a7d6;
+    --color-lime:#b4f52d;
+    --color-rood: #ea4d3d;
+    --color-tekst: #f3efe6;
 }
 
 /* === your rules === */
+
+body {
+    background-color: var(--color-pagina);
+    color: var(--color-tekst);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lijst {
+    position: relative;
+    width: 36rem;
+    margin: 4rem auto;
+}
+
+.vlakje {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+}
+
+.lijst img{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.groen {
+    background-color: var(--color-groen);
+    top: 2rem;
+    left: 2rem;
+}
+
+.roze {
+    z-index: 2;
+    background-color: var(--color-roze);
+    top:5rem;
+    left: 5rem;
+}
+
+.lime {
+    background-color: var(--color-lime);
+    bottom: 6rem;
+    right: 6rem;
+}
+
+.rood {
+    z-index: 2;
+    background-color: var(--color-rood);
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.lijst figcaption{
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
