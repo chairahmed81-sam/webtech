@@ -2,9 +2,32 @@
 
 /* === tokens === */
 :root {
-
+    
 }
 
 /* === base: narrow screens first === */
 
+main div:nth-child(1) {background-color: red;}
+main div:nth-child(2) {background-color: green;}
+main div:nth-child(3) {background-color: yellow;}
+main div:nth-child(4) {background-color: blue;}
+
+main {
+    display: grid;
+    min-height: 100svh;
+}
+
 /* === media queries: below the base rules === */
+
+@media (min-width:37.5rem) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width:50rem) {
+    main {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
