@@ -2,9 +2,135 @@
 
 /* === tokens === */
 :root {
-
+  --papier: #fff8ee;
+  --inkt: #1a1a1a;
+  --gedempt: #6b6b6b;
+  --accent: #d6341c;
+  --lijn: #e3d9c8;
 }
 
 /* === base: narrow screens first === */
 
+body {
+  background-color: var(--papier);
+  color: var(--inkt);
+  font-family: Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, .logo {
+  font-family: Georgia, serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--accent);
+  border-radius: 2rem;
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a.actief {
+  background-color: var(--accent);
+  color: white;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: white;
+  color: var(--inkt);
+}
+.held {
+  background-color: var(--accent);
+  color: white;
+  padding: clamp(2rem, 8vw, 6rem) clamp(1rem, 5vw, 4rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.held h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  line-height: 1.1;
+}
+.held + section {
+  max-width: 44rem;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 5vw, 4rem);
+}
+
+.programma {
+  list-style: none;
+  padding-left: 0;
+}
+
+.programma li {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--lijn);
+}
+
+.programma time {
+  min-width: 4rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.programma span {
+  margin-left: auto;
+  color: var(--gedempt);
+}
+
+footer {
+  color: var(--gedempt);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
 /* === media queries: below the base rules === */
+
+@media (min-width: 50rem) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 75rem) {
+  header {
+    flex-direction: row;
+    padding-inline: 3rem;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+}
