@@ -1,0 +1,10 @@
+/* stijl.css - labo 6, kleurvlakken (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+
+}
+
+/* === base: narrow screens first === */
+
+/* === media queries: below the base rules === */
