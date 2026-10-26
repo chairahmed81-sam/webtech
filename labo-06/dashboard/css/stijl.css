@@ -7,4 +7,65 @@
 
 /* === base: narrow screens first === */
 
+body {
+  background-color: #f3f1ec;
+  font-family: Verdana, sans-serif;
+  line-height: 1.4;
+}
+
+.dashboard {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tegel {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-height: 6rem;
+  color: white;
+  font-weight: bold;
+}
+
+.titel     { background-color: #1f2933; font-size: 1.5rem; }
+.grafiek   { background-color: #2c6e8f; }
+.omzet     { background-color: #c8742e; }
+.bezoekers { background-color: #3b7a2a; }
+.agenda    { background-color: #6b4fa3; }
+.taken     { background-color: #b2323a; }
+.weer      { background-color: #e0b43a; color: #1f2933; }
+
 /* === media queries: below the base rules === */
+
+@media (min-width: 50rem) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titel,
+  .grafiek,
+  .weer {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 75rem) {
+  .dashboard {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas:
+      "titel   titel   titel     titel"
+      "grafiek grafiek omzet     agenda"
+      "grafiek grafiek bezoekers taken"
+      "weer    weer    weer      weer";
+    min-height: 100svh;
+  }
+
+  .titel     { grid-area: titel; }
+  .grafiek   { grid-area: grafiek; }
+  .omzet     { grid-area: omzet; }
+  .agenda    { grid-area: agenda; }
+  .bezoekers { grid-area: bezoekers; }
+  .taken     { grid-area: taken; }
+  .weer      { grid-area: weer; }
+}
