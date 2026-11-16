@@ -1,0 +1,12 @@
+/* stijl.css - labo 7, leespagina (reset.css is linked before this file) */
+
+/* === fonts: one @font-face per file in fonts/ (7.2) === */
+
+/* === tokens: type scale, spacing scale, colour roles (7.4, 7.5, 7.7) === */
+:root {
+
+}
+
+/* === base === */
+
+/* === the article === */

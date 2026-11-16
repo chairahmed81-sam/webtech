@@ -1,0 +1,228 @@
+/* drie basisstijlregels om je te helpen */
+:root {font-size: 100%;  /* zet je dit op 62.5%, dan is elke rem 10px waard, anders 16px */ }
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+
+/* gebruikte kleuren */
+
+main ul li:nth-child(1) {background-color: #1ED760;color: #121212;}
+main ul li:nth-child(2) {background-color: #5352ED;color: #FDFEFE;}
+main ul li:nth-child(3) {background-color: #FF4B6E;color: #121212;}
+main ul li:nth-child(4) {background-color: #26D0CE;color: #0C0C0C;}
+main ul li:nth-child(5) {background-color: #F9ED69;color: #1A1A1A;}
+main ul li:nth-child(6) {background-color: #6A0572;color: #FAFAFA;}
+main ul li:nth-child(7) {background-color: #00A8E8;color: #FFF;}
+main ul li:nth-child(8) {background-color: #1E1E1E;color: #B2F2BB;}
+main ul li:nth-child(9) {background-color: #FF9F1C;color: #0D0D0D;}
+
+/* de andere gebruikte kleuren zijn black, white en red (elementen van de grids binnen de figuren) */
+
+body {
+    font-size: 1.4rem;
+    font-family: lato, arial, sans-serif;
+    line-height: 2rem;
+    background-color: black;}
+
+/* hier komt jouw css */
+
+header {
+    display: grid;
+}
+
+header h1 {
+    color: white;
+    padding: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    padding-right: 2rem;
+    text-decoration: none; 
+}
+
+nav a:hover, nav a:focus {
+    color: black;
+    background-color: white;
+}
+main ul{
+    display: grid;
+    gap: 0.625;
+}
+
+main ul li {
+    align-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+img {
+    display: none;
+}
+
+footer {
+    color: white;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media (min-width: 1200px) { 
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main  ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 6rem 12rem 12rem 18rem 12rem;
+        grid-template-areas: 
+            "blok1 blok2 blok3"
+            "blok4 blok2 blok5"
+            "blok4 blok6 blok5"
+            "blok7 blok6 blok8"
+            "blok7 blok9 blok8";
+    }
+
+    main ul li:nth-child(1) {grid-area: blok1;}
+    main ul li:nth-child(2) {grid-area: blok2;}
+    main ul li:nth-child(3) {grid-area: blok3;}
+    main ul li:nth-child(4) {grid-area: blok4;}
+    main ul li:nth-child(5) {grid-area: blok5;}
+    main ul li:nth-child(6) {grid-area: blok6;}
+    main ul li:nth-child(7) {grid-area: blok7;}
+    main ul li:nth-child(8) {grid-area: blok8;}
+    main ul li:nth-child(9) {grid-area: blok9;}
+
+    main ul li {
+        align-content: end;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    main ul li:nth-child(1) h2 {
+        line-height: 5rem;
+    }
+
+    main ul li:nth-child(3) h2 {
+        line-height: 5rem;
+    }
+
+    main ul li:nth-child(2) h4 {
+        font-size: 4rem;
+        line-height: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    main ul li:nth-child(5) {
+        position: relative;
+    }
+
+    img {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 15rem;
+    }
+
+    main ul li:nth-child(4) {
+        position: relative;
+    }
+
+    main ul li:nth-child(4) p {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        background-color: brown;
+    }
+
+    main ul li:nth-child(6) {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1rem;
+
+    }
+
+    main ul li:nth-child(6) p:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: red;
+    }
+
+    main ul li:nth-child(6) p:nth-child(2) {
+        grid-column: 2/4;
+        grid-row: 2/4;
+        background-color: red;
+    }
+
+    main ul li:nth-child(6) p:nth-child(3) {
+        grid-column: 4/7;
+        grid-row: 4/7;
+        background-color: red;
+    }
+
+    main ul li:nth-child(6) h2 {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+    }
+
+    main ul li:nth-child(7) {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }    
+
+    main ul li:nth-child(7) p {
+        background-color: red;
+    }
+    
+    main ul li:nth-child(7) h2 {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+    }
+
+    main ul li:nth-child(8) {
+        position: relative;
+        background-image: url(boxmodel.png);
+        background-position: center -6rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main ul li:nth-child(8) h2 {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+    }
+
+    footer ul {
+        gap: 0;
+        padding: 1rem 2rem;
+
+    }
+}

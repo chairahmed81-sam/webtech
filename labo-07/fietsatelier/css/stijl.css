@@ -1,0 +1,10 @@
+/* stijl.css - labo 7, fietsatelier (reset.css is linked before this file, thema.css after it) */
+
+/* === tokens for look A: colours, fonts, radius, type scale, spacing scale === */
+:root {
+
+}
+
+/* === base === */
+
+/* === header, intro, cards, footer: every colour via var(), nothing hard-coded === */
