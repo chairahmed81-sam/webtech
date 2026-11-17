@@ -2,9 +2,148 @@
 
 /* === tokens: five colour roles in hsl (7.7) === */
 :root {
+            /* white mode*/
+
+color-scheme: light dark;
+--color-oppervlak: hsl(45 60% 96%);
+--color-inkt: hsl(25 30% 12%);
+--color-gedempt: hsl(25 10% 40%);
+--color-accent: hsl(22 85% 40%);
+--color-lijn: hsl(40 25% 80%);
+
+--font-heading: Georgia, serif;
+--font-label: Verdana, sans-serif;
+
+/* tekstschaal, ratio 1.25 */
+  --text-s: 0.8rem;
+  --text-m: 1rem;
+  --text-l: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-xxl: 1.953rem;
+  --text-xxxl: 2.441rem;
+
+  /* witruimte */
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
 
 }
 
 /* === base === */
 
+body {
+    line-height: 1.5;
+    font-family: var(--font-label);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+    background-color: var(--color-oppervlak);
+    color: var(--color-inkt);
+
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-l);
+    line-height: 1.2;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: var(--space-xs);
+    margin-bottom: var(--space-s);
+}
+
+header {
+    text-align: center;
+    margin: var(--space-xl) 0 var(--space-l) 0;
+}
+
+p.naam {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    line-height: 1.1;
+    font-size: var(--text-xxl);    
+}
+
+p.slogan {
+    color: var(--color-gedempt);
+    margin-top: var(--space-xs);
+}
+
+main {
+    max-width: 56rem;
+    margin: 0 auto var(--space-l);
+    padding: 0 var(--space-m);
+    display: grid;
+    gap: var(--space-l);
+    grid-template-columns: repeat(auto-fit,minmax(16rem, 1fr));
+    align-content: start;
+}
+
+aside.info {
+    grid-column: 1 / -1;
+    border: 1px solid var(--color-lijn);
+    padding: var(--space-m);
+    border-radius: var(--space-s);
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-s) 0;
+    border-bottom: 1px dotted var(--color-lijn);
+}
+
+span.prijs {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+em.label {
+    background-color: var(--color-accent);
+    color: var(--color-oppervlak);
+    font-size: var(--text-s);
+    font-weight: bold;
+    letter-spacing: 0.02em;             /* ontwerper vraagt 0.08em; verkleind zodat "vegetarisch" past met Verdana */
+    padding: 0 var(--space-s);
+    text-transform: uppercase;
+    border-radius: var(--space-xs);
+    margin-left: var(--space-xs);       /* ontwerper vraagt s links ervan; verkleind zodat "vegetarisch" past met Verdana */
+    margin-right: var(--space-xs);      /* niet gevraagd door de ontwerper; toegevoegd voor ruimte tot de prijs */
+    font-style: normal;                 /* em staat standaard schuin; in het screenshot staat het label recht */
+    display: inline-block;              /* niet in de tekst van de ontwerper; uit het screenshot: label krijgt de volle regelhoogte */
+}
+
+.info p {
+    max-width: 65ch;
+    margin-bottom: var(--space-s);
+}
+
+p.gedempt {
+    color: var(--color-gedempt);
+    font-size: var(--text-s);
+}
+
+footer {
+    text-align: center;
+    color: var(--color-gedempt);
+    font-size: var(--text-s);
+    border-top: 1px solid var(--color-lijn);
+    padding: var(--space-l) 0;
+}
+
 /* === dark mode: tokens only (7.9) === */
+
+@media (prefers-color-scheme: dark) { :root {    
+--color-oppervlak: hsl(25 15% 10%);
+--color-inkt: hsl(40 30% 92%);
+--color-gedempt: hsl(30 10% 70%);
+--color-accent: hsl(32 90% 62%);
+--color-lijn: hsl(25 10% 28%);
+}
+}

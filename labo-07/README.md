@@ -17,8 +17,16 @@ De telling van mijn eigen site vóór dit labo (7.1): font-sizes ... / marges en
 ## 2. Leespagina
 
 - Waarom is de kolom op 1280 px zo'n 674 px breed en niet 65 keer 16 px?
+
+Omdat ch geen 16 px is. 1ch is de breedte van het cijfer 0 in de letter die je gebruikt, en een letter is smaller dan hij hoog is. In Atkinson Hyperlegible is 1ch ongeveer 10,4 px (gemeten in DevTools met width: 10ch). 65 × 10,4 px is ongeveer 674 px. Als je een andere letter kiest, wordt de kolom ook breder of smaller.
+
 - Wat verandert er als je de ratio op 1.2 zet, en hoeveel regels pas je daarvoor aan?
+
+Met ratio 1.2 wordt alles een beetje kleiner, behalve de gewone tekst (m blijft 1rem). Vooral de titel en de koppen worden kleiner, en het verschil tussen h2 en h3 is kleiner, dus de pagina wordt rustiger maar de koppen vallen minder op. Ik moest maar 5 regels aanpassen: de 5 tekstmaten op :root (s, l, xl, xxl en xxxl). Buiten :root moest ik niets veranderen, omdat alles met var() naar de tokens verwijst.
+
 - Hoeveel verschillende waarden voor `margin` en `padding` staan er in je bestand, en komen ze allemaal uit de schaal?
+
+Ik vond 5 verschillende waarden voor margin en padding: xs, s, m, l en xl. Ze komen allemaal uit de schaal op :root, ik gebruik ze altijd met var(). Daarnaast staan er alleen 0 en auto, en die mogen. Er staat dus geen losse waarde in mijn bestand.
 
 ## 3. Frituur 't Pleintje
 
