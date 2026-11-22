@@ -2,12 +2,161 @@
 
 /* === fonts === */
 
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
 /* === tokens === */
+
 :root {
+
+    --color-oppervlak: hsl(200 30% 97%);
+    --color-inkt: hsl(205 40% 12%);
+    --color-gedempt: hsl(205 12% 40%);
+    --color-accent: hsl(200 70% 32%);
+    --color-lijn: hsl(200 20% 82%);
+    --color-vlak: rgb(0 0 0 / 0.55);
+
+
+    --font-heading: "Fraunces", Georgia, serif;
+    --font-label: Verdana, sans-serif;
+
+/* tekstschaal, ratio 1.25 */
+  --text-s: 0.8rem;
+  --text-m: 1rem;
+  --text-l: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-xxl: 1.953rem;
+  --text-xxxl: 2.441rem;
+
+  /* witruimte */
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
 
 }
 
 /* === base === */
+
+body {
+    line-height: 1.5;
+    font-family: var(--font-label);
+    background-color: var(--color-oppervlak);
+}
+
+h1, h2 {
+    font-family: var(--font-heading);
+}
+
+h2 {
+    color: var(--color-accent);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-s);
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: var(--space-m);
+}
+
+p.lead {
+    font-size: var(--text-l);
+    margin-bottom: var(--space-l);
+}
+header.held {
+    display: grid;
+    align-items: end;
+    background-image: url("../afbeeldingen/kaaien.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 70svh;
+    padding: clamp(1rem, 5vw, 4rem);
+}
+
+.paneel {
+    background-color: var(--color-vlak);
+    color: white;
+    padding: var(--space-l);
+    max-width: 36rem;
+
+}
+
+a.knop {
+    background-color: var(--color-accent);
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: var(--space-s) var(--space-l);
+}
+
+a.knop:hover, 
+a.knop:focus {
+    background-color: white;
+    color: var(--color-accent);
+}
+
+p.bovenkop {
+    font-size: var(--text-s);
+    font-weight: bold;
+    margin-bottom: var(--space-s);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem, 1fr));
+    gap: var(--space-l);
+    max-width: 64rem;
+    margin: var(--space-xl) auto;
+    padding: 0 var(--space-m);
+}
+
+main p {
+    max-width: 65ch;
+    margin-bottom: var(--space-m);
+
+}
+
+.praktisch {
+    border: 1px solid var(--color-lijn);
+    padding: var(--space-m);
+    margin-bottom: var(--space-xl);
+    min-height: 18rem;
+    background-image: url("../afbeeldingen/kompas.png");
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position: bottom 1rem right 1rem;
+}
+.praktisch ul {
+    display: grid;
+    gap: var(--space-xs);
+}
+
+footer {
+    background-image: url("../afbeeldingen/golfjes.png");
+    background-repeat: repeat;
+    border-top: 1px solid var(--color-lijn);
+    padding: var(--space-xl) 0;
+    text-align: center;
+
+}
+
+footer p {
+    display: inline-block;
+    color: var(--color-gedempt);
+    font-size: var(--text-s);
+    background-color: var(--color-oppervlak);
+    padding: var(--space-s) var(--space-m);
+}
 
 /* === the hero: photo as background, text on a dark panel (7.10, F7.10) === */
 

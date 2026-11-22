@@ -28,7 +28,6 @@ color-scheme: light dark;
   --space-m: 1rem;
   --space-l: 2rem;
   --space-xl: 4rem;
-
 }
 
 /* === base === */
@@ -139,7 +138,8 @@ footer {
 
 /* === dark mode: tokens only (7.9) === */
 
-@media (prefers-color-scheme: dark) { :root {    
+@media (prefers-color-scheme: dark) { 
+:root {    
 --color-oppervlak: hsl(25 15% 10%);
 --color-inkt: hsl(40 30% 92%);
 --color-gedempt: hsl(30 10% 70%);
