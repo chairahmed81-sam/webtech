@@ -64,8 +64,22 @@ Met no-repeat staan de golfjes maar één keer in de voet, als een klein stukje 
 ## 5. Fietsatelier Noord
 
 - Staat er in `stijl.css` nog een letterlijke kleur, letter of maat buiten `:root`? Welke, en waarom ontsnapte ze?
+
+Ja, een paar, maar ze moeten niet in een token:
+
+transparent bij de onzichtbare lijn onder de links. Dat is geen kleur van de huisstijl, de lijn moet in A én B onzichtbaar zijn.
+44rem (breedte van de intro) en 14rem (minimum van de kaarten). Die maten geeft de ontwerper zo mee, en ze zijn in A en B hetzelfde.
+0.1em letterafstand en de randen van 1px en 2px. Die mogen volgens de regels.
+
+Alle kleuren, letters en hoeken die tussen A en B veranderen, komen uit een token.
+
 - Hoeveel regels telt `thema.css` zonder de `@font-face`-blokken?
+
+Zonder de @font-face-blokken heeft thema.css maar 8 tokens: 5 kleuren, 2 letters en 1 hoek (10 regels met :root { en } erbij). Met die 8 regels krijgt de hele site een andere huisstijl, zonder dat ik iets in stijl.css moest veranderen.7
+
 - Wat betekent dat voor B7.1 en je eigen site?
+
+Als ik in mijn eigen site alles uit tokens haal, kan ik later met een paar regels een andere letter of een ander kleurpalet kiezen, zonder door heel mijn CSS te moeten zoeken. Voor B7.1 moet ik net dat bewijzen: in één aparte commit alleen mijn tokenwaarden veranderen, en de hele site moet meeveranderen.
 
 ## Thuis: B7.1 (met AI of zonder AI)
 
