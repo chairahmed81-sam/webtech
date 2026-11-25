@@ -1,0 +1,56 @@
+/* stijl.css - labo 8, estafette (reset.css is linked before this file) */
+
+/* === tokens: colours, one duration, one curve and the time between two runners === */
+:root {
+    --wit: hsl(0 0% 100%);
+    --zeegroen: hsl(165 34% 47%);
+    --mintgroen: hsl(152 36% 57%);
+    --turkoois: hsl(187 44% 62%);
+    --lichtblauw: hsl(192 45% 77%);
+
+    --duur: 2s;
+    --curve: ease-in-out;
+    --wissel: 250ms;
+}
+
+/* === four lanes that fill the window === */
+
+.baan {
+    height: 100svh;
+    background-color: var(--wit);
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+/* === the runners: one animation, there and back; each one starts a little later (8.4) === */
+
+.loper {
+    width: 25svh;
+    height: 25svh;
+    animation: lopen var(--duur) var(--curve) infinite alternate;
+}
+
+.loper:nth-child(1) { background-color: var(--zeegroen); animation-delay: 0s; }
+.loper:nth-child(2) { background-color: var(--mintgroen); animation-delay: var(--wissel); }
+.loper:nth-child(3) { background-color: var(--turkoois); animation-delay: calc(var(--wissel) * 2); }
+.loper:nth-child(4) { background-color: var(--lichtblauw); animation-delay: calc(var(--wissel) * 3); }
+
+/* === keyframes: only the way there === */
+
+@keyframes lopen {
+    to {
+        transform: translateX(calc(100vw - 100%));
+    }
+}
+
+/* === reduced motion (8.5) === */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
